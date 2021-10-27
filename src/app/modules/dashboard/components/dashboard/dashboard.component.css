@@ -1,0 +1,41 @@
+.show-list-image img{
+    width: 100%;
+}
+
+.show-list-image {
+    position: relative;
+}
+
+.show-list-content {
+    position: relative;
+    height: 100px;
+    background: gray;
+    color: white;
+    font-size: 10px;
+}
+
+.show-list-content h6 {
+    height: 45px;
+}
+
+.show-list-content a {
+    color: white;
+    text-decoration: none !important;
+}
+
+.show-list-content ul {
+    list-style-type:none;
+}
+
+.genre-title {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.single-show-title {
+    font-size: 13px;
+}
+
+.star-icon {
+    font-size: 15px;
+}

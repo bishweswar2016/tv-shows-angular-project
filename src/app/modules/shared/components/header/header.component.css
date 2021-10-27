@@ -1,0 +1,47 @@
+header a {
+    text-decoration: none !important;
+}
+
+
+.search-result-div {
+    position: absolute;
+    background: black;
+    color: white;
+    z-index: 99;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 200px;
+    overflow: auto;
+    min-height: 100px;
+}
+
+.search-div {
+    position: relative;
+}
+
+.single-search-data {
+    
+}
+
+.single-search-result-image-div {
+    float:left;
+}
+
+.single-search-result-image {
+    width:50px;
+    padding:10px;
+}
+
+.single-search-result-title {
+    padding: 10px;
+    color: white;
+}
+
+.single-search-result-title a {
+    color: white;
+}
+
+.search-result-div a {
+    text-decoration: none !important;
+}

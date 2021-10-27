@@ -1,0 +1,51 @@
+<div class="container mt-5" *ngIf="error">
+    <div class="row mb-4">
+        <div class="col-md-3 p-3">
+            <h2 class="text-left genre-title">There is an error, please try again later.</h2>
+        </div>
+    </div>
+</div>
+<div class="container mt-5" *ngIf="genreShowList">
+    
+    <div class="row mb-4">
+        <div class="col-md-3 p-3">
+            <h2 class="text-left genre-title">Filter by Genre</h2>
+        </div>
+        
+        <div class="col-md-3 p-3">
+            <select class="form-select browser-default custom-select" [(ngModel)]="genre" (change)="getTvShowsByGenre()">
+                <option value="Comedy">Comedy</option>
+                <option value="Drama">Drama</option>
+                <option value="Sports">Sports</option>
+                <option value="Thriller">Thriller</option>
+            </select>
+        </div>
+    </div>
+            
+        
+    
+    <h2 class="text-left genre-title">{{genre}} TV Shows</h2>
+    <div class="row">
+        <div class="col-md-2 p-3" *ngFor="let show of genreShowList;">
+            <a class="show-list-image" routerLink="/show/{{show.id}}" >
+                <img class="img-fluid"  src="{{show.image.medium}}" />
+            </a>
+            <div class="show-list-content">
+                    <h6 class="text-center p-2">
+                        <a class="text-decoration-none single-show-title" routerLink="/show/{{show.id}}" >
+                            {{show.name}}
+                        </a>
+                    </h6>
+                    <div class="row">
+                        <div class="col-md-5 text-center" >
+                            <span class="star-icon">&#9734;</span> {{show.rating.average}}
+                        </div>
+                        <div class="col-md-7 text-center text-wrap" >
+                            {{show.genres.join(', ')}}
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
