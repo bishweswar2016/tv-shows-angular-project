@@ -1,4 +1,4 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed, tick } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { HeaderService } from './header.service';
 
@@ -21,7 +21,6 @@ describe('HeaderService', () => {
             .subscribe(course => {
                 expect(course).toBeTruthy();
                 expect(course[0].id).toBe(5264);
-
             },
             (error) => {    
                   const status = 500;

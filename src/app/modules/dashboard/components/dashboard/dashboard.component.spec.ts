@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed, fakeAsync, tick  } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { RouterTestingModule } from "@angular/router/testing";
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { DashboardComponent } from './dashboard.component';
 
 describe('DashboardComponent', () => {
@@ -10,7 +11,10 @@ describe('DashboardComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ DashboardComponent ],
-      imports: [ HttpClientTestingModule,RouterTestingModule ]
+      imports: [ HttpClientTestingModule,RouterTestingModule ],
+      schemas: [
+        CUSTOM_ELEMENTS_SCHEMA
+      ],
     })
     .compileComponents();
   }));
