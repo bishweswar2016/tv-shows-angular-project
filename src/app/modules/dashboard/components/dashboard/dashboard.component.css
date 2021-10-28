@@ -15,7 +15,7 @@
 }
 
 .show-list-content h6 {
-    height: 45px;
+    
 }
 
 .show-list-content a {
@@ -33,9 +33,49 @@
 }
 
 .single-show-title {
-    font-size: 13px;
+    font-size: 11px;
 }
 
 .star-icon {
     font-size: 15px;
+}
+
+.show-title {
+    max-height: 45px;
+    padding: 8px;
+}
+
+.single-show:hover {
+    box-shadow: 0 0 10px #5f2222;
+}
+
+.show-list-div {
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width:576px){
+    .col-md-4 {
+        padding: .3rem !important;
+    }
+}
+
+@media screen and (min-width:576px){
+    .col-md-4 {
+        padding: .3rem;
+    }
+}
+@media screen and (min-width:768px){
+    .col-md-2 {
+        min-width: 33%;
+    }
+}
+@media screen and (min-width:992px){
+    .col-md-2 {
+        min-width: 16%;
+    }
+}
+@media screen and (min-width:1200px){
+    .col-md-2 {
+        min-width: 16%;
+    }
 }

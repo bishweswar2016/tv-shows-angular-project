@@ -13,7 +13,7 @@ header a {
     right: 0;
     max-height: 200px;
     overflow: auto;
-    min-height: 100px;
+    //min-height: 50px;
 }
 
 .search-div {
@@ -44,4 +44,8 @@ header a {
 
 .search-result-div a {
     text-decoration: none !important;
+}
+
+.single-search-result:hover {
+      box-shadow: 0 0 25px #fff;
 }

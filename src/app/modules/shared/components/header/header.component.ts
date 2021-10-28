@@ -16,20 +16,21 @@ export class HeaderComponent implements OnInit {
   searchResult: ShowList[] = [];
   search: string = "";
   showSearch: number= 0;
-  searchError: string = "";
+  searchError: number = 0;
+  errorMsg: string = "";
   ngOnInit(): void {
-    
+    this.errorMsg ="No tv show found."
   }
   
   searchTvShow() {
     this.showSearch = 1;
-    this.headerService.searchShow(this.search).subscribe((data: any[])=>{
+    this.headerService.searchShow(this.search).subscribe((data: ShowList[])=>{
         this.searchResult = data;
-        this.searchError = "";
+        this.searchError = 0;
     },
     (error) => {                         
           this.searchResult = [];
-          this.searchError = "Theare is an error. Please try again later.";
+          this.searchError = 1;
     })
   }
   

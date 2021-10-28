@@ -4,22 +4,24 @@
         <div class="form-inline search-div">
             <input class="form-control" placeholder="Search TV Show" [(ngModel)]="search" (keyup)="searchTvShow();" (focus)='showSearchResult()' (blur)="hideSearchResult();"/>
             
-            <div class="search-result-div" *ngIf="searchError">
-                {{searchError}}
-            </div>
             
-            <div class="search-result-div" [ngClass]="showSearch == 1 ?'d-block':'d-none'" *ngIf="searchResult?.length">
-                <div class="single-search-result clearfix"  *ngFor="let showList of searchResult;trackBy:trackById">
-                    <div class="single-search-result-image-div" *ngIf="showList.show.name">
-                        <a href="javascript:void(0);" (mousedown)="goToShowDetail(showList.show.id);">
+            
+            <div class="search-result-div" [ngClass]="showSearch == 1 ?'d-block':'d-none'" *ngIf="search">
+                <div class="search-error-div p-3" *ngIf="searchError">
+                    {{errorMsg}}
+                </div>
+                <div class="single-search-result clearfix"  *ngFor="let showList of searchResult;trackBy:trackById" >
+                    <a href="javascript:void(0);" (mousedown)="goToShowDetail(showList.show.id);">
+                        <div class="single-search-result-image-div" *ngIf="showList.show.name">
                             <img *ngIf="showList.show.image" class="img-fluid single-search-result-image" src="{{showList.show.image.medium}}">
-                        </a>
-                    </div>
-                    <div class="single-search-result-title" *ngIf="showList.show.name">
-                        <a href="javascript:void(0);" (mousedown)="goToShowDetail(showList.show.id);">
-                            {{showList.show.name}}
-                        </a>
-                    </div>
+                        </div>
+                        <div class="single-search-result-title" *ngIf="showList.show.name">
+                             {{showList.show.name}}
+                        </div>
+                    </a>
+                </div>
+                <div class="search-error-div p-3" *ngIf="!searchResult.length && !searchError && search">
+                    {{errorMsg}}
                 </div>
             </div>
         </div>

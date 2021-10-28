@@ -10,13 +10,9 @@ const routes: Routes = [
         path:'show/:id',
         loadChildren: () => import('./modules/show-detail/show-detail.module').then(m => m.ShowDetailModule)
     },
-    {
-        path: '404', 
-        loadChildren: () => import('./modules/page-not-found/page-not-found.module').then(m => m.PageNotFoundModule)
-    },
     { 
         path: '**', 
-        redirectTo: '/404'
+        loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule)
     }
 ];
 

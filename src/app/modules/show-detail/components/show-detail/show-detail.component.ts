@@ -18,7 +18,7 @@ export class ShowDetailComponent implements OnInit {
             this.showDetail = data;
       },
       (error) => {                         
-          this.router.navigateByUrl('/404');
+          this.router.navigateByUrl('/');
        })
   }
 
