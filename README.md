@@ -31,5 +31,5 @@ Then need to run the following command `npm install` using Command Prompt.
 
 ## Run Development server
 
-Run `npm start` for a dev server. Navigate to `http://localhost:4200/`.
+Navigate to the project folder using command prompt then run `npm start` command. Open  `http://localhost:4200/` link in browser.
 
