@@ -26,5 +26,16 @@ describe('CommonService', () => {
         expect(service_data).toEqual(sports_data);    
     });
     
+    it('should get Tv Sort by rating', () => {
+        var data = [{"id":1,"rating":{"average":7.8}}, {"id":3,"rating":{"average":8.2}}];
+        
+        var sports_data = [{"id":3,"rating":{"average":8.2}}, {"id":1,"rating":{"average":7.8}}];
+        
+        var service_data = service.getTvShowsOrderByRating(data);
+        expect(service_data).toEqual(sports_data);    
+        
+    });
+    
+    
     
 });
