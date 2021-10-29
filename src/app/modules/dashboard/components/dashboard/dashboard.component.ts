@@ -18,7 +18,7 @@ export class DashboardComponent implements OnInit {
   error:  string = "";
   
   ngOnInit(): void {
-    this.dashboardService.getTvShows().subscribe((data: any[])=>{
+    this.dashboardService.getTvShows().subscribe((data: ShowList[])=>{
         this.genre = "Thriller";
         this.showList = data;
         this.getTvShowsByGenre();

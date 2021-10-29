@@ -1,6 +1,10 @@
-# TvShowsAngularProject
+# Tv Shows Angular Project
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0.
+
+## Why Choose Angular
+I have chosen Angular framework for this project, because I am more comfortable with Angular than Vue.js or React. 
+
 
 ## Prerequisites
 
@@ -21,23 +25,11 @@ First need to clone the project in our machine.
 Then need to navigate to the project using Command Prompt.
 
 ## Step 3
-Then need to run the following command `npm install`
+Then need to run the following command `npm install` using Command Prompt.
 
 
 
 ## Run Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm start` for a dev server. Navigate to `http://localhost:4200/`.
 
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

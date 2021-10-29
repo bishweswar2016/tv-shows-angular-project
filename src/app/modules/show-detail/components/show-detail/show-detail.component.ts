@@ -14,7 +14,7 @@ export class ShowDetailComponent implements OnInit {
   
   ngOnInit(): void {
       let showId = this.activatedRoute.snapshot.params.id;
-      this.showDetailService.getShowDetail(showId).subscribe((data: any[])=>{
+      this.showDetailService.getShowDetail(showId).subscribe((data: Show[])=>{
             this.showDetail = data;
       },
       (error) => {                         

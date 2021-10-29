@@ -6,12 +6,10 @@
     </div>
 </div>
 <div class="container" *ngIf="genreShowList && !error">
-    
     <div class="row mt-4">
         <div class="col-md-4 p-3">
             <h2 class="text-left genre-title">Filter by Genre</h2>
         </div>
-        
         <div class="col-md-4 p-3">
             <select class="form-select browser-default custom-select" [(ngModel)]="genre" (change)="getTvShowsByGenre()">
                 <option value="Thriller">Thriller</option>
@@ -21,17 +19,12 @@
             </select>
         </div>
     </div>
-            
-        
-    
     <h2 class="text-left genre-title">{{genre}} TV Shows</h2>
     <div class="row show-list-div">
         <div class="col-md-2 p-3 single-show" *ngFor="let show of genreShowList;">
             <a class="show-list-image text-decoration-none" routerLink="/show/{{show.id}}" >
                 <img class="img-fluid"  src="{{show.image.medium}}" />
-            
                 <div class="show-list-content">
-
                         <h6 class="text-center show-title">
                             <span class="single-show-title">
                                 {{show.name}}

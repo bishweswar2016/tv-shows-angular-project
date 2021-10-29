@@ -3,9 +3,6 @@
         <a class="page-header text-white page-header" routerLink="/">TV Show Dashboard</a>
         <div class="form-inline search-div">
             <input class="form-control" placeholder="Search TV Show" [(ngModel)]="search" (keyup)="searchTvShow();" (focus)='showSearchResult()' (blur)="hideSearchResult();"/>
-            
-            
-            
             <div class="search-result-div" [ngClass]="showSearch == 1 ?'d-block':'d-none'" *ngIf="search">
                 <div class="search-error-div p-3" *ngIf="searchError">
                     {{errorMsg}}
