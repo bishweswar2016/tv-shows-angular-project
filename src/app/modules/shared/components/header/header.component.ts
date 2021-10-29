@@ -50,6 +50,4 @@ export class HeaderComponent implements OnInit {
     this.router.navigateByUrl('/show/'+showId);
     this.showSearch = 0;
   }
-  
-
 }

@@ -15,4 +15,10 @@ describe('DashboardService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+  
+  it('#should get all TV Shows', () => {
+    expect(service.getTvShows()).not.toBeNull();
+  });
+  
+  
 });

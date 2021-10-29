@@ -1,4 +1,4 @@
-import { TestBed, tick } from '@angular/core/testing';
+import { async, fakeAsync, TestBed, tick } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { HeaderService } from './header.service';
 
@@ -15,20 +15,11 @@ describe('HeaderService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+      
+  it('#should find a course by Title', () => {
+    expect(service.searchShow("stuck in the")).not.toBeNull();
+  });
   
-  it('should find a course by Title', () => {
-        service.searchShow("stuck in the")
-            .subscribe(course => {
-                expect(course).toBeTruthy();
-                expect(course[0].id).toBe(5264);
-            },
-            (error) => {    
-                  const status = 500;
-                  const statusText = 'Internal Server Error';
-                  expect(error.status).toBe(status);
-                  expect(error.statusText).toBe(statusText);
-            }
-    )});
 });
 
 

@@ -10,7 +10,6 @@ import { ShowList } from "./../../../core/interfaces/show"
 export class DashboardComponent implements OnInit {
 
   constructor(public dashboardService:DashboardService, public commonService:CommonService) { }
-
   
   genreShowList: ShowList[];
   showList: ShowList[];

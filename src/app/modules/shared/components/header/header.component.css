@@ -1,8 +1,6 @@
 header a {
     text-decoration: none !important;
 }
-
-
 .search-result-div {
     position: absolute;
     background: black;
@@ -13,39 +11,30 @@ header a {
     right: 0;
     max-height: 200px;
     overflow: auto;
-    //min-height: 50px;
 }
-
 .search-div {
     position: relative;
 }
-
 .single-search-data {
     
 }
-
 .single-search-result-image-div {
     float:left;
 }
-
 .single-search-result-image {
     width:50px;
     padding:10px;
 }
-
 .single-search-result-title {
     padding: 10px;
     color: white;
 }
-
 .single-search-result-title a {
     color: white;
 }
-
 .search-result-div a {
     text-decoration: none !important;
 }
-
 .single-search-result:hover {
       box-shadow: 0 0 25px #fff;
 }

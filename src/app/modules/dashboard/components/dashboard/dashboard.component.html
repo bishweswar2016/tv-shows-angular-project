@@ -25,23 +25,23 @@
             <a class="show-list-image text-decoration-none" routerLink="/show/{{show.id}}" >
                 <img class="img-fluid"  src="{{show.image.medium}}" />
                 <div class="show-list-content">
-                        <h6 class="text-center show-title">
-                            <span class="single-show-title">
-                                {{show.name}}
-                            </span>
-                        </h6>
-                        <div class="star-genre-cls">
-                            <div class="row">
-                                <div class="col-md-12 text-center" >
-                                    <strong><span class="star-icon">&#9734;</span> {{show.rating.average}}</strong>
-                                </div>
-                            </div>
-                            <div class="row p-1">
-                                <div class="col-md-12 text-center text-wrap" >
-                                    {{show.genres.join(', ')}}
-                                </div>
+                    <h6 class="text-center show-title">
+                        <span class="single-show-title">
+                            {{show.name}}
+                        </span>
+                    </h6>
+                    <div class="star-genre-cls">
+                        <div class="row">
+                            <div class="col-md-12 text-center" >
+                                <strong><span class="star-icon">&#9734;</span> {{show.rating.average}}</strong>
                             </div>
                         </div>
+                        <div class="row p-1">
+                            <div class="col-md-12 text-center text-wrap" >
+                                {{show.genres.join(', ')}}
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </a>
         </div>

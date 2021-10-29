@@ -9,7 +9,6 @@ export class CommonService {
       data = data.filter(function(show){return show.genres.indexOf(genre) >= 0?show:"";});
       return this.getTvShowsOrderByRating(data);
   }
-  
   getTvShowsOrderByRating = (data) => {
     data.sort((a: any, b: any) => {
       if (a.rating.average > b.rating.average) {

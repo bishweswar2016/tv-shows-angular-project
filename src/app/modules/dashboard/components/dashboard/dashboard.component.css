@@ -39,26 +39,21 @@
 .star-icon {
     font-size: 15px;
 }
-
 .show-title {
     max-height: 45px;
     padding: 8px;
 }
-
 .single-show:hover {
     box-shadow: 0 0 10px #5f2222;
 }
-
 .show-list-div {
     margin-bottom: 30px;
 }
-
 @media screen and (max-width:576px){
     .col-md-4 {
         padding: .3rem !important;
     }
 }
-
 @media screen and (min-width:576px){
     .col-md-4 {
         padding: .3rem;

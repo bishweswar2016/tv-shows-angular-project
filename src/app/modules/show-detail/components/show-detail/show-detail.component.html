@@ -10,27 +10,27 @@
              </h3>
            <div [innerHtml]="showDetail.summary"></div>
            <div>
-                 <h3 class="show-title">Show Info</h3>
-                 <div *ngIf="showDetail.network">
-                    <strong>Network: </strong> 
-                     <a *ngIf="showDetail.officialSite" target="_blank" href="{{showDetail.officialSite}}">{{showDetail.network.name}}</a>
-                     <span *ngIf="!showDetail.officialSite">{{showDetail.network.name}}</span>
-                 </div>
-                 <div>
-                    <strong>Schedule:</strong> {{showDetail.schedule.days[0]}} at {{showDetail.schedule.time}}  ({{showDetail.runtime}} minutes)
-                 </div>
-                 <div>
-                    <strong>Status:</strong> {{showDetail.status}}                    
-                 </div>
-                 <div>
-                    <strong>Show Type: </strong> {{showDetail.type}}                    
-                 </div>
-                 <div *ngIf="showDetail.genres[0]">
-                    <strong>Genres:</strong>
-                     <ul>
-                         <li *ngFor="let genres of showDetail.genres;">{{genres}}</li>
-                     </ul>
-                 </div>
+             <h3 class="show-title">Show Info</h3>
+             <div *ngIf="showDetail.network">
+                <strong>Network: </strong> 
+                 <a *ngIf="showDetail.officialSite" target="_blank" href="{{showDetail.officialSite}}">{{showDetail.network.name}}</a>
+                 <span *ngIf="!showDetail.officialSite">{{showDetail.network.name}}</span>
+             </div>
+             <div>
+                <strong>Schedule:</strong> {{showDetail.schedule.days[0]}} at {{showDetail.schedule.time}}  ({{showDetail.runtime}} minutes)
+             </div>
+             <div>
+                <strong>Status:</strong> {{showDetail.status}}                    
+             </div>
+             <div>
+                <strong>Show Type: </strong> {{showDetail.type}}                    
+             </div>
+             <div *ngIf="showDetail.genres[0]">
+                <strong>Genres:</strong>
+                 <ul>
+                     <li *ngFor="let genres of showDetail.genres;">{{genres}}</li>
+                 </ul>
+             </div>
            </div>
         </div>
     </div>

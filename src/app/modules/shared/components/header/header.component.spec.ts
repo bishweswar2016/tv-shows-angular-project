@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { RouterTestingModule } from "@angular/router/testing";
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HeaderComponent } from './header.component';
 import { HeaderService } from "./../../services/header.service" 
 import * as Rx from 'rxjs';
@@ -17,7 +18,10 @@ describe('HeaderComponent', () => {
       declarations: [ HeaderComponent ],
       providers : [ HeaderService ],
       imports: [ FormsModule, RouterTestingModule.withRoutes([    
- { path: 'show/1', component: ShowDetailComponent }]),HttpClientTestingModule,RouterTestingModule]
+ { path: 'show/1', component: ShowDetailComponent }]),HttpClientTestingModule,RouterTestingModule],
+ schemas: [
+        CUSTOM_ELEMENTS_SCHEMA
+      ],
     })
     .compileComponents();
   }));
@@ -40,7 +44,7 @@ describe('HeaderComponent', () => {
     
     component.searchTvShow();
     fixture.whenStable().then(() => {
-        console.log(component.searchResult);
+    
     });
 
 
@@ -64,8 +68,9 @@ describe('HeaderComponent', () => {
   
   it('should call goToShowDetail and rediect to details page', fakeAsync(() => {
     const fixture = TestBed.createComponent(HeaderComponent);
-    const component = fixture.debugElement.componentInstance;
-    component.goToShowDetail(1);
+    fixture.ngZone.run(() => {
+        component.goToShowDetail(1);
+    });
     expect(component.showSearch).toEqual(0);
   }))
   
